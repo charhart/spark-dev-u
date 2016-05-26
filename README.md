@@ -15,7 +15,7 @@ Some of these are derived from Zecevic, P., & Bonaci, M. (2016). Spark in Action
   2. Create user named 'spark' (Your home directory (~) will be /home/spark), create a password
 2. Install java, I used openjdk-8
   1. From a terminal, `sudo apt-get install openjdk-8-jdk`
-3. Install the latest (Spark)[http://spark.apache.org/downloads.html]
+3. Install the latest [Spark](http://spark.apache.org/downloads.html)
   1. Pick the latest Spark release
   2. Pick the latest pre-built Hadoop version
   3. Pick mirror and download
