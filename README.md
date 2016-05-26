@@ -10,7 +10,7 @@ If you want to setup on your own, or don't have internal access, here's what I d
 Some of these are derived from Zecevic, P., & Bonaci, M. (2016). Spark in Action. Manning Pubns., so buy their book!
 
 
-1. Setup a new VirtualBox image with Ubuntu. (This link)[http://www.wikihow.com/Install-Ubuntu-on-VirtualBox] might be helpful if you're new to VirtualBox.
+1. Setup a new VirtualBox image with Ubuntu. [This link](http://www.wikihow.com/Install-Ubuntu-on-VirtualBox) might be helpful if you're new to VirtualBox.
   1. Give yourself some decent memory, if you can spare it. I gave mine about 8GB.
   2. Create user named 'spark' (Your home directory (~) will be /home/spark), create a password
 2. Install java, I used openjdk-8
