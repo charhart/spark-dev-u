@@ -91,7 +91,7 @@ At this point, you should be ready to start executing some Spark commands. See e
   7. Execute `python` which should open a Python shell
   8. Create a PySpark desktop icon, this should open straight up to PySpark
     1. Open up your favorite text editor in the ~/Desktop directory
-    2. Create new file called spark-shell.desktop
+    2. Create new file called pyspark.desktop
     3. Put the following in the file (the icon is optional)
     ```
     [Desktop Entry]
@@ -101,3 +101,21 @@ At this point, you should be ready to start executing some Spark commands. See e
     Type=Application
     Icon=/usr/share/app-install/icons/spark_logo.png
     ```
+  9. Make sure icon is runnable
+
+### If you want to run SparkR
+  1. Install R 
+    `sudo apt-get install r-base`
+  2. Create an icon
+    1. Open up your favorite text editor in the ~/Desktop directory
+    2. Create new file called spark-r.desktop
+    3. Put the following in the file (the icon is optional)
+    ```
+    [Desktop Entry]
+    Name=SparkR
+    Exec=/home/spark/bin/spark/bin/sparkR
+    Terminal=true
+    Type=Application
+    Icon=/usr/share/app-install/icons/spark_logo.png
+    ```
+  3. Make sure the icon is runnable
