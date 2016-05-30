@@ -10,12 +10,12 @@ If you want to setup on your own, or don't have internal access, here's what I d
 Some of these are derived from Zecevic, P., & Bonaci, M. (2016). Spark in Action. Manning Pubns., so buy their book!
 
 
-1. Setup a new VirtualBox image with Ubuntu. (This link)[http://www.wikihow.com/Install-Ubuntu-on-VirtualBox] might be helpful if you're new to VirtualBox.
+1. Setup a new VirtualBox image with Ubuntu. [This link](http://www.wikihow.com/Install-Ubuntu-on-VirtualBox) might be helpful if you're new to VirtualBox.
   1. Give yourself some decent memory, if you can spare it. I gave mine about 8GB.
   2. Create user named 'spark' (Your home directory (~) will be /home/spark), create a password
 2. Install java, I used openjdk-8
   1. From a terminal, `sudo apt-get install openjdk-8-jdk`
-3. Install the latest (Spark)[http://spark.apache.org/downloads.html]
+3. Install the latest [Spark](http://spark.apache.org/downloads.html)
   1. Pick the latest Spark release
   2. Pick the latest pre-built Hadoop version
   3. Pick mirror and download
@@ -43,6 +43,9 @@ Some of these are derived from Zecevic, P., & Bonaci, M. (2016). Spark in Action
   Type=Application
   Icon=/usr/share/app-install/icons/spark_logo.png
   ```
+  4. You might also have to give it permissions
+    1. Right Click icon, Properties > Permissions
+    2. Check 'Allow executing file as program'
 10. Update log4j, so it doesn't spit out a ton of messages
   1. `cd ~/bin/spark`
   2. `vim conf/log4j.properties` (or use whatever editor your like)
@@ -70,4 +73,49 @@ Some of these are derived from Zecevic, P., & Bonaci, M. (2016). Spark in Action
   ```
 11. Check out this repo, under your home directory, e.g. '/home/spark/spark-dev-u'
 
+
 At this point, you should be ready to start executing some Spark commands. See exercises, for some examples.
+
+### If you want to run PySpark
+  1. [Download](https://www.python.org/downloads/release/python-2711/) the latest tarball (I stuck with 2.7.x)
+  2. Untar it, `tar xvf Python-2.7.[version-etc-etc].tgz`
+  3. Install what you need to compile and configure Python
+    1. `sudo apt-get install build-essential checkinstall`
+    2. `sudo apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev`
+  4. Go the directory where you untarred Python, `cd Python-2.7.[version-etc-etc]/`
+  5. Execute configure
+    1. `.configure`
+  6. Make and check install
+    1. `sudo make install`
+    2. `sudo checkinstall`
+  7. Execute `python` which should open a Python shell
+  8. Create a PySpark desktop icon, this should open straight up to PySpark
+    1. Open up your favorite text editor in the ~/Desktop directory
+    2. Create new file called pyspark.desktop
+    3. Put the following in the file (the icon is optional)
+    ```
+    [Desktop Entry]
+    Name=PySpark
+    Exec=/home/spark/bin/spark/bin/pyspark
+    Terminal=true
+    Type=Application
+    Icon=/usr/share/app-install/icons/spark_logo.png
+    ```
+  9. Make sure icon is runnable
+
+### If you want to run SparkR
+  1. Install R 
+    `sudo apt-get install r-base`
+  2. Create an icon
+    1. Open up your favorite text editor in the ~/Desktop directory
+    2. Create new file called spark-r.desktop
+    3. Put the following in the file (the icon is optional)
+    ```
+    [Desktop Entry]
+    Name=SparkR
+    Exec=/home/spark/bin/spark/bin/sparkR
+    Terminal=true
+    Type=Application
+    Icon=/usr/share/app-install/icons/spark_logo.png
+    ```
+  3. Make sure the icon is runnable
