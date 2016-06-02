@@ -27,7 +27,7 @@ public class SparkFileReader {
             
             @Override
             public Boolean call(final String v1) throws Exception {
-                return v1.contains("ERROR") || v1.contains("Exception");
+                return v1.contains("error") || v1.contains("exception");
             }
             
         });
