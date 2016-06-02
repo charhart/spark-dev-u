@@ -22,7 +22,7 @@ public class SparkFileReader {
         //                .setMaster("spark://mylocalmachine:7077")
         //                .setJars(new String[] {"thisjar.jar"});
         
-        final JavaRDD<String> logFile = jsc.textFile("nlpweb.log");
+        final JavaRDD<String> logFile = jsc.textFile("web.log");
         final JavaRDD<String> errors = logFile.filter(new Function<String, Boolean>() {
             
             @Override
